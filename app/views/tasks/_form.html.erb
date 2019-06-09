@@ -1,0 +1,15 @@
+<%= form_for @task do |f| %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title, class: 'form-control' %>
+  </p>
+  <p>
+    <%= f.label :start_time %><br />
+    <%= f.text_field :start_time, class: 'form-control' %>
+  </p>
+  <p>
+    <%= f.label :end_time %><br />
+    <%= f.text_field :end_time, class: 'form-control' %>
+  </p>
+  <p><%= f.submit class: 'btn btn-primary' %></p>
+<% end %>

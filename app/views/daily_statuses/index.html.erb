@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-md-auto">
+      <div class="card rounded-0 mt-5 mb-5">
+        <div class="card-header shadow">
+          <h1>Listing Daily Status</h1><br>
+        </div>
+        <div class="container">
+         <table class="table table-dark">
+           <tr>
+            <th>Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Actions</th>
+          </tr>
+           <% @daily_statuses.each do |daily_status| %>
+             <tr>
+               <td><%= daily_status.date %></td>
+               <td><%= daily_status.start_time %></td>
+               <td><%= daily_status.end_time %></td>
+               <td><%= link_to "Show", daily_status, class: "btn btn-light btn-sm" %></td>
+               <td><%= link_to "Edit", edit_daily_status_path(daily_status), class: "btn btn-light btn-sm"  %></td>
+               <td><%= link_to "Destroy", daily_status, class: "btn btn-light btn-sm",  :confirm => 'Are you sure?', :method => :delete %></td>
+              </tr>
+            <% end %>
+        </table>
+
+        <p><%= link_to "New Daily status", new_daily_status_path, class: "btn btn-dark" %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

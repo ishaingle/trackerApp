@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 mx-md-auto">
+			<div class="card rounded-0 mt-5 mb-5">
+				<div class="card-header shadow">
+					<h4>Edit Tasks</h4>
+				</div>
+				<div class="card-body">
+				<%= render 'form' %>
+				<p>
+				  <%= link_to "Show", @daily_status, class: "btn btn-dark" %> |
+				  <%= link_to "View All", daily_statuses_path, class: "btn btn-dark" %>
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
